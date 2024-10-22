@@ -31,12 +31,8 @@ def init_db():
 @click.command('init-db')
 def init_db_command():
     """Clear the existing data and create new tables."""
-
-    app = current_app.get_current_object()
-    
-    with app.app_context():
-        init_db()
-        click.echo('Initialized the database.')
+    init_db()
+    click.echo('Initialized the database.')
 
 
 def init_app(app):
