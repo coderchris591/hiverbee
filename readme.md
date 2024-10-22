@@ -1,3 +1,3 @@
-Initialize the Database using: flask --app hiver_site init-db
+Initialize the Database using: flask --app hiverbee init-db
 
-Start the app in debug using: flask --app hiver_site run 
+Start the app in debug using: flask --app hiverbee run 
