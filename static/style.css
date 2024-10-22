@@ -107,10 +107,12 @@ button:hover {
     color: black;
     font-size: 2em;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none;     
     background-color: white;
     border-radius: 10px;
+    scroll-behavior: smooth;
 }
+
 
 h2 {
     display: block;

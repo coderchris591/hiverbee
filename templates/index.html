@@ -2,6 +2,29 @@
 
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+
+</script>
+
  
 {% block content %}
     <div class="container">
@@ -12,7 +35,7 @@
             <p>WE ARE COMMMITED TO BRINGING BACK GENUINE HUMAN CONNECTION.</p>
             <!-- <div class="flex-row"> -->
                 <!-- <img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link"> -->
-                <a href="#join"><button>JOIN THE WAITLIST</button></a>
+                <a id="join-button" href="#join"><button>JOIN THE WAITLIST</button></a>
             <!-- </div> -->
         </div>
 
@@ -21,7 +44,7 @@
         </div>
 
         <div class="flex-row">    
-            <img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link">
+            <a href="https://www.instagram.com/thehiverapp/" target="_blank"><img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link"></a>
             <a class="sign-up" href="#join">SIGN-UP</a>
             <img class="social">
 
@@ -71,7 +94,7 @@
         </div>
 
         <div class="flex-row">    
-            <img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link">
+            <a href="https://www.instagram.com/thehiverapp/" target="_blank"><img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link"></a>
             <a class="sign-up" href="#join">SIGN-UP</a>
             <img class="social">
         </div>
