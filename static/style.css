@@ -17,7 +17,7 @@ p {
 body {
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-color: #0e0e0e;
 }
 
 h1 {
@@ -87,17 +87,19 @@ button:hover {
 }
 
 .coming-soon {
-    display: block;
-    width: 80%;
-    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .sign-up {
     display: block;
     width: 25%;
     height: 40px;
     padding: 10px;
-    margin: 10px auto;
+    margin: 50px auto;
     color: black;
     font-size: 2em;
     text-align: center;
@@ -154,6 +156,7 @@ button {
     width: 80%;
     height: 80px;
     font-size: 2em;
+    margin: 0 auto;
 }
 
 .join-the-waitlist {
@@ -202,6 +205,33 @@ h3 {
     text-align: center;
 }
 
+.mission-statement {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.mission-statement .logo {
+    position: inherit;
+    width: 200px;
+}
+
+.mission-statement p {
+    line-height: 1.4em;
+    font-size: 1.2em;
+    padding-bottom: 10vh;
+    max-width: 600px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -224,6 +254,10 @@ h3 {
         padding-top: 10vh;
     }
 
+    .main {
+        height: 100vh;
+    }
+
     .main p {
         font-size: 1.3em;
         width: 50%;
@@ -244,9 +278,6 @@ h3 {
         width: 20px;
     }
 
-    .coming-soon {
-        width: 70%;
-    }
 
     .sign-up {
         width: 15%;
@@ -266,7 +297,8 @@ h3 {
     .about-video {
         height: 90vh;
         margin: 0;
-        padding-left: 15vh;
+        padding-left: 20vh;
+        z-index: 10;
     }
 
     .about-hiver {
@@ -279,6 +311,7 @@ h3 {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        z-index: -1;
     }
 
     .clear-both {
@@ -286,17 +319,107 @@ h3 {
     }
 
 
-
-
-
-
-   
-
-    .our-section {
+    .our-story {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 100vh;
+        width: 50%;
     }
+
+    .our-vision {
+        padding-top: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    .our {
+        clear: both;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-right: 100px;
+    }
+
+
+    .join-the-waitlist {
+        height: 100vh;
+        background-image: url('/static/img/PIE_SMASH.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .join-the-waitlist button {
+        margin: 30vh auto 0;
+    }
+    
+
+
+    form {
+        width: 100%;
+        align-items: center;
+    }
+    
+    form input {
+        display: block;
+        width: 80%;
+        height: 50px;
+        font-size: 1em;
+        background: transparent;
+        color: white;
+    }
+
+    .blurry {
+        margin: 10%;
+    }
+    .join-the-waitlist button {
+        margin: 0;
+        font-size: 1em;
+        width: 60%;
+        height: 50px;
+        margin-top: 5vh;
+    }
+
+    h3{
+        font-size: 2em;
+        opacity: 0.7;
+    }
+
+    .left {
+        width: 40%;
+    }
+    .right {
+        width: 40%;
+    }
+
+
+    .join-the-waitlist .logo {
+        position: inherit;
+        width: 300px;
+
+    }
+
+    p {
+        width: 70%;
+        line-height: 1.3em;
+        font-size: 1em;
+    }
+
+
+
 }

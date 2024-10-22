@@ -5,74 +5,98 @@
  
 {% block content %}
     <div class="container">
+
         <div class="main">
             <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Hiver Logo">
             <h1>WHAT ARE YOU WAITING FOR...<br>FIND YOUR HIVE.</h1>
             <p>WE ARE COMMMITED TO BRINGING BACK GENUINE HUMAN CONNECTION.</p>
-            <a href="#join"><button>JOIN THE WAITLIST</button></a>
-            <img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link">
+            <!-- <div class="flex-row"> -->
+                <!-- <img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link"> -->
+                <a href="#join"><button>JOIN THE WAITLIST</button></a>
+            <!-- </div> -->
         </div>
-        <div >
-            <img class="coming-soon" src="{{ url_for('static', filename='img/coming_soon (2).png') }}" alt="Coming Soon">
-            <a class="sign-up" href="#join">SIGN-UP</a>
+
+        <div class="coming-soon">
+            <img src="{{ url_for('static', filename='img/coming_soon (2).png') }}" alt="Coming Soon">
+        </div>
+
+        <div class="flex-row">    
             <img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link">
+            <a class="sign-up" href="#join">SIGN-UP</a>
+            <img class="social">
+
         </div>
 
 
         <div class="about">
+
             <div class="">
                 <video class="about-video" controls autoplay loop muted>
                 <source src="{{ url_for('static', filename='img/pie_smash (2).mp4') }}" type="video/mp4">
                 Your browser does not support this video.
                 </video>
-                <!-- <img class="about-video" src="{{ url_for('static', filename='img/PIE_SMASH.gif') }}" alt="Pie Smash"> -->
             </div> 
+
             <div class="about-hiver">
                 <h2>ABOUT HIVER</h2>
                 <p>Committed to socialization, offering social media users opportunities to gather and engage in the true meaning of friendships, on and off the screens. Hiver is your app to simplify Hive (events/party) invites and planning! Whether you are looking to socialize or experience new things in your area, or planning a birthday party for a loved one, Hiver is for you!</p>
-                <a class="sign-up" href="#join">SIGN-UP</a>
-                <div class="down-arror"></div>
             </div> 
+
         </div>
 
 
-        <div class="our-section">
-
+        <div class="our">
             <div class="our-story"> 
                 <h2>OUR STORY</h2>
                 <p>We started with the idea to simplify finding parties for college aged individuals, and slowly broadened our reach to give everyone the opportunity to be themselves through experiences everywhere.<br> A post covid lifestyle turned out to be less than fulfilling with social media taking the little joys of socialization away from us. Hiver is our solution to harnessing social media for genuine human connection.</p>
-                <img class='image' src="{{ url_for('static', filename='img/our_story.jpg') }}" alt="Our Story">
-                <img class='image' src="{{ url_for('static', filename='img/our_story2.jpg') }}" alt="Our Story">
-                <img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link">
+                <div class="flex-row">    
+                    <img class='image' src="{{ url_for('static', filename='img/our_story.jpg') }}" alt="Our Story" style="width: 150px;">
+                    <img class='image' src="{{ url_for('static', filename='img/our_story2.jpg') }}" alt="Our Story" style="width: 200px;">
+                </div>
             </div>
 
 
-            <div>
-                <div class="center">
-                    <img class='image' src="{{ url_for('static', filename='img/our_vision.jpg') }}" alt="Our Vision">
-                    <img class='image' src="{{ url_for('static', filename='img/our_vision2.jpg') }}" alt="Our Vision">
+            <div class="our-vision">
+
+                <div class="flex-row">
+                    <img class='image' src="{{ url_for('static', filename='img/our_vision2.jpg') }}" alt="Our Vision" style="width: 300px;">
+                    <img class='image' src="{{ url_for('static', filename='img/our_vision.jpg') }}" alt="Our Vision" style="width: 200px; padding-left: -50px;">
+                    <img class="social">
                 </div>
+
                 <h2>OUR VISION</h2>
                 <p>To create a social media environment for people to experience life's greatest joys of socialization.</p>
-                <a class="sign-up" href="#join">SIGN-UP</a>
-            </div>
 
+            </div>
         </div>
+
+        <div class="flex-row">    
+            <img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link">
+            <a class="sign-up" href="#join">SIGN-UP</a>
+            <img class="social">
+        </div>
+
+
 
 
         <div class="mission-statement">
-            <img class="logo center" src="{{ url_for('static', filename='img/logo.png') }}" alt="Hiver Logo">
+            <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Hiver Logo">
             <p>Be true to you, free spirited and purely you. Experience life with Hiver, find Hives in your area, meet new people, discover new adventures, try new food, and explore what the world has to offer.<br>Together, we can unite communities by utilizing social media for a weapon of peace, not destruction. A society built on the strength of friendships and understanding where we can bring back genuine human connection for good, once and for all.</p>
+        </div>
+        <!-- <div class="flex-row">    
             <img class="social" src="{{ url_for('static', filename='img/Instagram_Glyph_Gradient.png') }}" alt="Instagram Link">
             <a class="sign-up" href="#join">SIGN-UP</a>
-        </div>
+        </div> -->
+
+
         <div id='join' class="join-the-waitlist">
-            <div class="blurry">
-                <div class="">
-                    <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Hiver Logo">
+            
+            <div class="blurry flex-row">
+                <div class="left">
+                    <img class="logo small-logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Hiver Logo">
                     <h3>WHAT HIVE ARE YOU CHOOSING?</h3>
                 </div>
-                <div class="float-right">
+                <div class="right">
                     <form method="post">
                         <input type="text" name="first_name" placeholder="First Name" required>
                         <input type="text" name="last_name" placeholder="Last Name" required>
