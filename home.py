@@ -29,3 +29,7 @@ def index():
 
     else:
         return render_template('index.html')
+    
+@bp.route('/privacy')
+def privacy_policy():
+    return render_template('privacy.html')
