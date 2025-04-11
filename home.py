@@ -33,3 +33,7 @@ def index():
 @bp.route('/privacy')
 def privacy_policy():
     return render_template('privacy.html')
+
+@bp.route('/support')
+def support():
+    return render_template('support.html')
